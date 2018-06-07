@@ -15,9 +15,14 @@ client.on('ready', () => {
 client.on('message', message => {
     
     if (message.content === prefix + 'lung') {
-        message.channel.send(lungs[ilung]);
-        
-        ilung++;
+        const embed = new Discord.RichEmbed()
+           .setTitle("Step " + (ilung + 1))
+           
+           .setDescription(lung[ilung])
+           .setImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdOtj-rv9hG-h69FXIjzC_cdHSq88h8ess_wOvaN8Lq-qRnT0Y4Q")
+          
+      message.channel.send({embed});
+      ilung++;
         
   	}
 });
