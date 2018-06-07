@@ -34,29 +34,28 @@ function getRandomColor() {
 client.on('ready', () => {  
     console.log('I am ready!');
     shuffle(lungs);
+    shuffle(lungpics);
 });
-
 client.on('message', message => {
-    
-    if (message.content === prefix + 'lung') {
-        if(ilungpics == lungpics.length - 1){
-            ilungpics = 0;
-            shuffle(lungspics);
-        }
-        if(ilung == lung.length - 1){
-            ilung = 0;
-            shuffle(lungs);
-        }
-        const embed = new Discord.RichEmbed()
-            .setTitle("Step " + ilung + 1)
-            .setDescription(lungs[ilung]);
-            .setColor(getRandomColor());
-            .setImage(lungspics[ilungpics]);
-        message.channel.send({embed});
-        
-        ilung++;
-        ilungpics++;
-  	}
+    if (message.content.startsWith(prefix + 'lungs')) {
+      if(ilungpics == lungpics.length - 1){
+          shuffle(lungpics);
+          ilungpics = 0;
+      } 
+      if(ilung == lungs.length - 1){
+          shuffle(lungs);
+          ilung = 0;
+      } 
+      const embed = new Discord.RichEmbed()
+           .setTitle("Harry Potter Meme")
+           .setColor(getRandomColor())
+           .setDescription("Here is your Harry Potter meme! :smile: :fire:")
+           .setImage(lungpics[ilungpics])
+           
+      message.channel.send({embed});
+      ilungpics++;
+      ilung++;
+    }
 });
 client.on('message', message => {
     
