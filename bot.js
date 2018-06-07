@@ -21,8 +21,8 @@ client.on('message', message => {
            .setDescription(lung[ilung])
            .setImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdOtj-rv9hG-h69FXIjzC_cdHSq88h8ess_wOvaN8Lq-qRnT0Y4Q")
           
-      message.channel.send({embed});
-      ilung++;
+        message.channel.send({embed});
+        ilung++;
         
   	}
 });
