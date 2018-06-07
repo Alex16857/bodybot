@@ -21,9 +21,19 @@ function shuffle(a) {
     }
     return a;
 }
-shuffle(lungs);
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+
 client.on('ready', () => {  
     console.log('I am ready!');
+    shuffle(lungs);
 });
 
 client.on('message', message => {
@@ -38,8 +48,9 @@ client.on('message', message => {
             shuffle(lungs);
         }
         const embed = new Discord.RichEmbed()
-            .setTitle("Step " + ("`" + (ilung + 1) + "`"))
+            .setTitle("Step " + ilung + 1)
             .setDescription(lungs[ilung]);
+            .setColor(getRandomColor());
             .setImage(lungs[ilungpics]);
         message.channel.send({embed});
         ilung++;
