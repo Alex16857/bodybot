@@ -47,9 +47,9 @@ client.on('message', message => {
           ilung = 0;
       } 
       const embed = new Discord.RichEmbed()
-           .setTitle("Harry Potter Meme")
+           .setTitle("Step " + ilung + 1)
            .setColor(getRandomColor())
-           .setDescription("Here is your Harry Potter meme! :smile: :fire:")
+           .setDescription(lungs[ilung])
            .setImage(lungpics[ilungpics])
            
       message.channel.send({embed});
