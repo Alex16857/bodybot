@@ -16,7 +16,7 @@ client.on('message', message => {
     
     if (message.content === prefix + 'lung') {
         const embed = new Discord.RichEmbed()
-           .setTitle("Step " + (ilung + 1))
+           .setTitle("Step " + ("`" + (ilung + 1) + "`"))
            
            .setDescription(lung[ilung])
            .setImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdOtj-rv9hG-h69FXIjzC_cdHSq88h8ess_wOvaN8Lq-qRnT0Y4Q")
