@@ -41,7 +41,7 @@ client.on('message', message => {
     if (message.content === prefix + 'lung') {
         if(ilungpics == lungpics.length - 1){
             ilungpics = 0;
-            shuffle(lungs);
+            shuffle(lungspics);
         }
         if(ilung == lung.length - 1){
             ilung = 0;
@@ -51,8 +51,9 @@ client.on('message', message => {
             .setTitle("Step " + ilung + 1)
             .setDescription(lungs[ilung]);
             .setColor(getRandomColor());
-            .setImage(lungs[ilungpics]);
+            .setImage(lungspics[ilungpics]);
         message.channel.send({embed});
+        
         ilung++;
         ilungpics++;
   	}
