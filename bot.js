@@ -83,7 +83,7 @@ client.on('message', message => {
       ibrain++;
     }
         
-  	}
+  	
 });
 client.on('message', message => {
     
