@@ -64,7 +64,7 @@ client.on('message', message => {
 client.on('message', message => {
     
     if (message.content === prefix + 'brain') {
-       if(ibrainpics == brainpics.length - 1){
+       if(ibrainpics == brainpics.length ){
           
           ibrainpics = 0;
       } 
