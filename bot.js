@@ -51,7 +51,7 @@ client.on('message', message => {
           ilung = 0;
       } 
       const embed = new Discord.RichEmbed()
-           .setTitle("Step " + ilung + 1)
+           .setTitle("The Lungs")
            .setColor(getRandomColor())
            .setDescription(lungs[ilung])
            .setImage(lungpics[ilungpics])
@@ -73,7 +73,7 @@ client.on('message', message => {
           ibrain = 0;
       } 
       const embed = new Discord.RichEmbed()
-           .setTitle("Step " + ibrain + 1)
+           .setTitle("The Brain")
            .setColor(getRandomColor())
            .setDescription(brain[ibrain])
            .setImage(brainpics[ibrainpics])
