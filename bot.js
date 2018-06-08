@@ -43,7 +43,7 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.content.startsWith(prefix + 'lungs')) {
       if(ilungpics == lungpics.length - 1){
-          shuffle(lungpics);
+         
           ilungpics = 0;
       } 
       if(ilung == lungs.length - 1){
@@ -65,7 +65,7 @@ client.on('message', message => {
     
     if (message.content === prefix + 'brain') {
        if(ibrainpics == brainpics.length - 1){
-          shuffle(brainpics);
+          
           ibrainpics = 0;
       } 
       if(ibrain== brain.length - 1){
