@@ -113,11 +113,28 @@ client.on('message', message => {
       iheartpics++;
       iheart++;
         
+        
   	}
 });
-
-
-
-
-// THIS  MUST  BE  THIS  WAY
+client.on('message', message => {
+    
+    if (message.content === prefix + 'brainmeme') {
+      if(ibrainmemes == brainmemes.length - 1){
+          shuffle(brainmemes);
+          ibrainmemes= 0;
+      } 
+      
+      const embed = new Discord.RichEmbed()
+           .setTitle("Brain Memes :rofl:")
+           .setColor(getRandomColor())
+    
+           .setImage(brainmemes[ibrainmemes])
+           
+      message.channel.send({embed});
+      ibrainmemes++;
+     
+        
+        
+  	}
+});
 client.login(process.env.BOT_TOKEN);
