@@ -100,7 +100,7 @@ client.on('message', message => {
           iheart = 0;
       } 
       const embed = new Discord.RichEmbed()
-           .setTitle("The Lungs")
+           .setTitle("The Heart")
            .setColor(getRandomColor())
            .setDescription(heart[iheart])
            .setImage(heartpics[iheartpics])
