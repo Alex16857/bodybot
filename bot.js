@@ -15,7 +15,7 @@ var ibrain = 0;
 var ilungpics = 0;
 var iheart = 0;
 var ibrainmemes = 0;
-
+var imove = 0;
 var iheartpics = 0;
 var ibrainpics = 0;
 var prefix = 'b>';
@@ -97,11 +97,11 @@ client.on('message', message => {
     
     if (message.content === prefix + 'heart') {
       if(iheartpics == heartpics.length - 1){
-         
+          shuffle(heartpics);
           iheartpics = 0;
       } 
       if(iheart == heart.length - 1){
-          shuffle(heart);
+          
           iheart = 0;
       } 
       const embed = new Discord.RichEmbed()
@@ -134,6 +134,27 @@ client.on('message', message => {
       message.channel.send({embed});
       ibrainmemes++;
      
+        
+        
+  	}
+});
+client.on('message', message => {
+    
+    if (message.content === prefix + 'move') {
+      
+      if(iheart == heart.length - 1){
+ 
+          iheart = 0;
+      } 
+      const embed = new Discord.RichEmbed()
+           .setTitle("The Heart")
+           .setColor(getRandomColor())
+           .setDescription(move[imove])
+           
+           
+      message.channel.send({embed});
+      
+      imove++;
         
         
   	}
