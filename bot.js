@@ -153,7 +153,7 @@ client.on('message', message => {
           imovepics = 0;
       } 
       const embed = new Discord.RichEmbed()
-           .setTitle("The Heart")
+           .setTitle("How The Body Moves")
            .setColor(getRandomColor())
            .setDescription(move[imove])
            
